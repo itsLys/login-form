@@ -20,6 +20,8 @@
   padding: 0;
   box-sizing: inherit;
   font-family: var(--font-main);
+  transition: transform ease 0.3s;
+  fill: inherit;
 }
 li {
   list-style: none;
@@ -29,22 +31,18 @@ a {
   text-decoration: none;
 }
 input {
-  border: 2px solid var(--dark);
+  border: 2px solid var(--light);
 }
 h2 {
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
-svg {
-  max-width: 20px;
-}
+
 img {
   width: 400px;
 }
-input[type="submit"] {
-  background: linear-gradient(135deg, #f26101 0%, #ffb576 100%);
-}
+
 .container {
   padding: 0 2rem;
 }
@@ -63,6 +61,13 @@ input {
     padding: 1rem 0.75rem;
     border-radius: var(--border-radius);
   }
+  label {
+    margin-bottom: 0.5rem;
+  }
+  label,
+  input {
+    font-size: 0.95rem;
+  }
   li:first-child {
     display: flex;
   }
@@ -75,10 +80,93 @@ input {
       border-right: 0;
     }
   }
+
   .email {
     flex: 1;
     input {
       border-radius: 0 10px 10px 0;
     }
   }
+  input[type="submit"] {
+    border: none;
+    color: var(--white);
+    background: linear-gradient(to right, #f26101 0%, #ffb576 100%);
+  }
+  input[type="submit"]:is(:hover, :focus) {
+    transform: scale(0.975);
+  }
+}
+form {
+  margin-top: ;
+  width: 85%;
+  margin: 8.5rem auto 0;
+}
+form > h2 {
+  margin-bottom: 3rem;
+}
+.show-password {
+  margin-top: 1rem;
+  input,
+  label {
+    display: inline-block;
+    width: initial;
+    font-weight: 400;
+  }
+  input {
+    position: relative;
+    top: 1px;
+    margin-right: 0.25rem;
+  }
+}
+.continue-with {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-size: 0.9rem;
+  color: var(--mid);
+}
+.continue-with::before {
+  content: "";
+  width: 30%;
+  margin-right: 10px;
+  border-bottom: 3px var(--light) solid;
+}
+.continue-with::after {
+  content: "";
+  width: 30%;
+  margin-left: 10px;
+  border-bottom: 3px var(--light) solid;
+}
+.social-login {
+  fill: var(--mid);
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto;
+  li {
+    flex-grow: 1;
+  }
+  a {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--mid);
+    padding: 0.5rem;
+  }
+  a:is(:hover, :focus) {
+    transform: scale(0.95);
+  }
+  svg {
+    height: 1.5rem;
+  }
+}
+.already {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.already > a {
+  font-weight: 700;
+  color: var(--orange);
 }
