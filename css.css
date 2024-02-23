@@ -20,7 +20,8 @@
   padding: 0;
   box-sizing: inherit;
   font-family: var(--font-main);
-  transition: transform ease 0.3s;
+  transition: transform ease 0.3s, fill ease 0.3s, background-color ease 0.3s,
+    color ease 0.3s, border ease 0.3s;
   fill: inherit;
 }
 li {
@@ -155,6 +156,8 @@ form > h2 {
     padding: 0.5rem;
   }
   a:is(:hover, :focus) {
+    fill: var(--dark);
+    border: 2px solid var(--dark);
     transform: scale(0.95);
   }
   svg {
