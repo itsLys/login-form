@@ -24,6 +24,9 @@
     color ease 0.3s, border ease 0.3s;
   fill: inherit;
 }
+body {
+  background-color: var(--light);
+}
 li {
   list-style: none;
 }
@@ -32,7 +35,7 @@ a {
   text-decoration: none;
 }
 input {
-  border: 2px solid var(--light);
+  border: 2px solid var(--mid);
 }
 h2 {
   font-family: var(--font-heading);
@@ -134,13 +137,13 @@ form > h2 {
   content: "";
   width: 10vw;
   margin-right: 10px;
-  border-bottom: 3px var(--light) solid;
+  border-bottom: 3px var(--mid) solid;
 }
 .continue-with::after {
   content: "";
   width: 10vw;
   margin-left: 10px;
-  border-bottom: 3px var(--light) solid;
+  border-bottom: 3px var(--mid) solid;
 }
 .social-login {
   fill: var(--mid);
