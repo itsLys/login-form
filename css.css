@@ -98,7 +98,6 @@ input {
   }
 }
 form {
-  margin-top: ;
   width: 85%;
   margin: 8.5rem auto 0;
 }
@@ -172,4 +171,7 @@ form > h2 {
 .already > a {
   font-weight: 700;
   color: var(--orange);
+}
+.bg-section {
+  display: none;
 }
